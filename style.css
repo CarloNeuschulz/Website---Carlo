@@ -1,0 +1,99 @@
+/*
+
+Mittels root lässt einen variabeln erstellen die man dannlokal benutzen kann 
+
+z.B.:
+    :root {
+    --main-color: #2f80ed;
+    --text-color: #222;
+    --background-color: #f4f4f4;
+    --card-color: #ffffff;
+    }
+
+    body {
+    color: var(--text-color);
+    background-color: var(--background-color);
+    }
+
+    .resume-item {
+    border-left: 4px solid var(--main-color);
+    background-color: var(--card-color);
+    }
+*/
+
+/* Mobile Part */
+/*Wenn der Bildschirm kleiner als 700px ist, stapel die Boxen untereinander.*/
+@media (max-width: 700px) {
+  .skills-container {
+    flex-direction: column;
+  }
+}
+
+:root {
+    --main-color: #2f80ed;
+    --text-color: #222;
+    --background-color: #f4f4f4;
+    --card-color: #ffffff
+}
+
+
+/* Bezieht sich auf die ganze Website */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* 
+Verändert alle sections gleichmäßig 
+    alle Sections maximal 900px breit
+    zentriert sie mit margin: 40px auto
+    gibt Innenabstand mit padding
+    macht weißen Kartenlook
+*/
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 32px;
+  background-color: var(--background-color);
+  border-radius: 12px;
+}
+
+/* bearbeitet alle paragraphen */
+p {
+    font-size: 18px;
+}
+
+/*bearbeitet alle headings der größe hx */
+h3 {
+    text-decoration: underline;
+    text-decoration-color: var(--text-color); /* Farbe der Linie */
+    text-decoration-thickness: 3px; /* Stärke der Linie */
+    text-decoration-style: solid; /* solid, wavy, dotted oder dashed */
+    text-underline-offset: 5px; /* Abstand zum Text (optional) */
+}
+
+h4 {
+    font-size: 28px;
+}
+
+.resume-block {
+    transform: translateX(50px);
+}
+
+.resume-item {
+    transform: translateX(25px);
+}
+
+li {
+    font-size: 18px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.skills-container {
+    display:flex; /* setzt die Kinder nebeneinander */
+    justify-content: flex-start;
+    align-items: flex-start;
+}

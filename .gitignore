@@ -1,0 +1,10 @@
+# IDE project settings
+.idea/
+
+# Local environment files
+.env
+.env.*
+
+# Operating system files
+Thumbs.db
+.DS_Store
